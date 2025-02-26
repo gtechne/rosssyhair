@@ -152,7 +152,17 @@ const ProductDetails = () => {
               <p>{data?.description}</p>
             </div>
 
-           {/* Reviews Section */}
+          
+
+
+           
+          </div>
+        )}
+      </div>
+
+      {/* Recommended Products */}
+      {data.category && <CategoryWiseProductDisplay category={data?.category} heading={"Recommended Products"} />}
+       {/* Reviews Section */}
             {/* Reviews Section */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold">Customer Reviews</h3>
@@ -174,15 +184,6 @@ const ProductDetails = () => {
                 <p className="text-gray-500">No reviews yet. Be the first to review this product!</p>
               )}
             </div>
-
-
-           
-          </div>
-        )}
-      </div>
-
-      {/* Recommended Products */}
-      {data.category && <CategoryWiseProductDisplay category={data?.category} heading={"Recommended Products"} />}
     </div>
   );
 };
